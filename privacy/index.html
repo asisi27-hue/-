@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#9B6FE8">
+<title>מדיניות פרטיות — קשת חברים 🌈</title>
+<meta name="description" content="מדיניות הפרטיות של אפליקציית קשת חברים — שקיפות מלאה על איסוף ושימוש בנתונים">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌈</text></svg>">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Heebo', -apple-system, Arial, sans-serif;
+    background: #FFF8EE;
+    color: #2D1F4F;
+    line-height: 1.7;
+    direction: rtl;
+    padding: 20px 16px 60px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 32px;
+    box-shadow: 0 8px 30px rgba(155, 111, 232, 0.12);
+  }
+  
+  /* HEADER */
+  .header {
+    text-align: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #FAF6FF;
+  }
+  
+  .logo {
+    font-size: 64px;
+    margin-bottom: 12px;
+    display: inline-block;
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #2D1F4F;
+    margin-bottom: 8px;
+    font-family: 'Frank Ruhl Libre', 'Heebo', serif;
+  }
+  
+  .subtitle {
+    color: #5C4A7A;
+    font-size: 16px;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #9B6FE8, #FF7A88);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+  
+  /* QUICK SUMMARY */
+  .summary {
+    background: linear-gradient(135deg, #FAF6FF 0%, #FFF0F5 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    border-right: 4px solid #9B6FE8;
+  }
+  
+  .summary h2 {
+    color: #6E4FCB;
+    font-size: 20px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .summary-item {
+    background: white;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(155, 111, 232, 0.06);
+  }
+  
+  .summary-item.good { border-right: 3px solid #5DD9A8; }
+  .summary-item.no { border-right: 3px solid #FF7A88; }
+  
+  .summary-item-emoji { font-size: 22px; }
+  .summary-item-text { font-weight: 500; }
+  
+  /* SECTIONS */
+  section {
+    margin-bottom: 28px;
+  }
+  
+  h2.section-title {
+    color: #6E4FCB;
+    font-size: 22px;
+    margin-bottom: 14px;
+    padding-right: 12px;
+    border-right: 4px solid #9B6FE8;
+    font-family: 'Frank Ruhl Libre', 'Heebo', serif;
+  }
+  
+  p {
+    margin-bottom: 12px;
+    color: #2D1F4F;
+    font-size: 16px;
+  }
+  
+  ul, ol {
+    margin: 12px 0 12px 0;
+    padding-right: 24px;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    color: #2D1F4F;
+  }
+  
+  strong { color: #6E4FCB; }
+  
+  a {
+    color: #9B6FE8;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1.5px solid #9B6FE855;
+  }
+  a:hover { border-bottom-color: #9B6FE8; }
+  
+  /* HIGHLIGHT BOXES */
+  .highlight {
+    background: #FAF6FF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    border-right: 4px solid #9B6FE8;
+  }
+  
+  .highlight.warning {
+    background: #FFF5F0;
+    border-color: #FF9F43;
+  }
+  
+  .highlight.good {
+    background: #F0FFF4;
+    border-color: #5DD9A8;
+  }
+  
+  /* CONTACT */
+  .contact-box {
+    background: linear-gradient(135deg, #9B6FE8, #6E4FCB);
+    color: white;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .contact-box h2 { color: white; margin-bottom: 12px; }
+  .contact-box p { color: rgba(255, 255, 255, 0.9); margin-bottom: 16px; }
+  
+  .contact-box a {
+    background: white;
+    color: #6E4FCB;
+    padding: 12px 24px;
+    border-radius: 99px;
+    font-weight: 700;
+    border: none;
+    display: inline-block;
+  }
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #FAF6FF;
+    color: #9B92AD;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  
+  footer strong { color: #6E4FCB; }
+  
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    body { padding: 12px; }
+    .container { padding: 24px 18px; }
+    h1 { font-size: 26px; }
+    .summary-grid { grid-template-columns: 1fr; }
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Frank+Ruhl+Libre:wght@700;900&display=swap">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">🌈</div>
+    <h1>מדיניות פרטיות</h1>
+    <p class="subtitle">קשת חברים — אפליקציה למיומנויות חברתיות</p>
+    <span class="badge">עודכן: מאי 2026 · גרסה 1.0</span>
+  </header>
+
+  <!-- QUICK SUMMARY -->
+  <div class="summary">
+    <h2>💡 תקציר במשפט אחד</h2>
+    <p style="margin-bottom: 12px;">
+      <strong>אנחנו לא אוספים שום מידע אישי על המשתמשים.</strong> 
+      כל הנתונים נשמרים מקומית במכשיר ואינם יוצאים ממנו.
+    </p>
+
+    <div class="summary-grid">
+      <div class="summary-item no">
+        <span class="summary-item-emoji">❌</span>
+        <span class="summary-item-text">לא אוספים שמות</span>
+      </div>
+      <div class="summary-item no">
+        <span class="summary-item-emoji">❌</span>
+        <span class="summary-item-text">לא אוספים גילאים</span>
+      </div>
+      <div class="summary-item no">
+        <span class="summary-item-emoji">❌</span>
+        <span class="summary-item-text">לא דורשים הרשמה</span>
+      </div>
+      <div class="summary-item no">
+        <span class="summary-item-emoji">❌</span>
+        <span class="summary-item-text">לא מציגים פרסומות</span>
+      </div>
+      <div class="summary-item good">
+        <span class="summary-item-emoji">✅</span>
+        <span class="summary-item-text">חינמי ושקוף</span>
+      </div>
+      <div class="summary-item good">
+        <span class="summary-item-emoji">✅</span>
+        <span class="summary-item-text">מאובטח ב-HTTPS</span>
+      </div>
+      <div class="summary-item good">
+        <span class="summary-item-emoji">✅</span>
+        <span class="summary-item-text">תומך COPPA</span>
+      </div>
+      <div class="summary-item good">
+        <span class="summary-item-emoji">✅</span>
+        <span class="summary-item-text">תומך GDPR</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section>
+    <p>
+      ברוכים הבאים ל<strong>קשת חברים</strong> — אפליקציה לפיתוח מיומנויות חברתיות לילדים על הספקטרום האוטיסטי.
+    </p>
+    <p>
+      פרטיות המשתמשים שלנו, ובמיוחד פרטיות הילדים, היא ערך עליון עבורנו. 
+      מסמך זה מסביר בצורה ברורה ופשוטה אילו נתונים אנו אוספים (ספוילר: כמעט אף אחד), 
+      איך אנו משתמשים בהם, ואיך אתם יכולים לפנות אלינו.
+    </p>
+  </section>
+
+  <!-- 1. WHO WE ARE -->
+  <section>
+    <h2 class="section-title">1. 🏢 מי אנחנו</h2>
+    <p>
+      האפליקציה <strong>קשת חברים</strong> מפותחת ומופעלת על ידי:
+    </p>
+    <div class="highlight">
+      <strong>Maximo Corporation</strong><br>
+      בעלים: אסף סולומון<br>
+      סטטוס: עוסק זעיר רשום בישראל<br>
+      שנת ייסוד: 2025<br>
+      📧 אימייל: <a href="mailto:Asisi27@gmail.com">Asisi27@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- 2. WHAT WE DON'T COLLECT -->
+  <section>
+    <h2 class="section-title">2. ❌ מה אנחנו לא אוספים</h2>
+    <p>זאת הרשימה החשובה ביותר במסמך הזה. אנחנו <strong>לא אוספים</strong>:</p>
+    <ul>
+      <li>❌ שמות פרטיים או שמות משפחה</li>
+      <li>❌ גיל הילד או תאריך לידה</li>
+      <li>❌ כתובות אימייל</li>
+      <li>❌ מספרי טלפון</li>
+      <li>❌ מיקום גיאוגרפי או GPS</li>
+      <li>❌ תמונות, סרטונים או הקלטות שמע</li>
+      <li>❌ אנשי קשר מהמכשיר</li>
+      <li>❌ היסטוריית גלישה או אינטרנט</li>
+      <li>❌ קוקיות מעקב או פרסומיות</li>
+      <li>❌ נתוני אנליטיקס מזהים</li>
+    </ul>
+  </section>
+
+  <!-- 3. WHAT WE DO STORE -->
+  <section>
+    <h2 class="section-title">3. ✅ מה כן נשמר (מקומית בלבד)</h2>
+    <p>
+      לצורך פעולת האפליקציה, אנחנו שומרים נתונים <strong>מקומית במכשיר שלכם בלבד</strong>. 
+      הנתונים האלה לא יוצאים מהמכשיר ולא מגיעים לשום שרת שלנו:
+    </p>
+    <ul>
+      <li>⭐ מספר הכוכבים שצברתם</li>
+      <li>📋 הסיטואציות שהושלמו</li>
+      <li>⚙️ הגדרות נגישות אישיות (גודל טקסט, סוג קול וכו')</li>
+      <li>📅 יומן רגשות (אם השתמשתם בו)</li>
+      <li>✅ אישור מדיניות פרטיות (כדי לא לבקש שוב)</li>
+    </ul>
+    <div class="highlight good">
+      💡 <strong>טיפ:</strong> אם תמחקו את האפליקציה או תנקו את נתוני הדפדפן — 
+      כל המידע הזה נמחק לחלוטין. אין שום עותק בשרתים שלנו.
+    </div>
+  </section>
+
+  <!-- 4. AI CONVERSATIONS -->
+  <section>
+    <h2 class="section-title">4. 🤖 שיחות עם בינה מלאכותית</h2>
+    <p>
+      האפליקציה כוללת תכונת "פורום AI" שמאפשרת שיחה עם דמויות וירטואליות (דני, נועה, סבתא רותי וכו'). 
+      איך זה עובד מבחינת פרטיות:
+    </p>
+    <ol>
+      <li>הילד מקליד הודעה באפליקציה</li>
+      <li>ההודעה נשלחת באופן מוצפן (HTTPS) דרך שרת ביניים שלנו ב-<strong>Cloudflare</strong> אל <strong>Anthropic</strong> (יוצרי Claude AI)</li>
+      <li>Anthropic מעבדת את ההודעה ומחזירה תגובה</li>
+      <li>התגובה מוצגת לילד באפליקציה</li>
+      <li><strong>אנחנו לא שומרים את ההודעות</strong> בשום מקום</li>
+    </ol>
+    <div class="highlight warning">
+      ⚠️ <strong>חשוב:</strong> Anthropic עשויה לשמור הודעות זמנית למטרות אבטחה ושיפור השירות, 
+      בהתאם למדיניות הפרטיות שלהם. למידע נוסף ראו:
+      <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">מדיניות פרטיות של Anthropic</a>
+    </div>
+    <p>
+      <strong>המלצה להורים:</strong> מומלץ ללוות את הילד בשיחות הראשונות עם ה-AI, 
+      ולא להזין בהודעות שמות, כתובות או פרטים אישיים.
+    </p>
+  </section>
+
+  <!-- 5. MICROPHONE -->
+  <section>
+    <h2 class="section-title">5. 🎙️ שימוש במיקרופון</h2>
+    <p>
+      האפליקציה משתמשת במיקרופון רק כשהמשתמש לוחץ במפורש על כפתור המיקרופון. 
+      ההקלטה מעובדת <strong>מקומית בדפדפן</strong> (Web Speech API) באמצעות שירות זיהוי דיבור של Google/Apple 
+      בהתאם למערכת ההפעלה.
+    </p>
+    <ul>
+      <li>אין שמירה של הקלטות שמע</li>
+      <li>הטקסט שמתורגם מהדיבור לא נשלח לשום מקום (אלא אם הילד שולח אותו כהודעה)</li>
+      <li>ניתן לסרב להרשאת מיקרופון — האפליקציה תעבוד גם בלי</li>
+    </ul>
+  </section>
+
+  <!-- 6. CHILDREN'S PRIVACY (COPPA) -->
+  <section>
+    <h2 class="section-title">6. 👶 הגנה על ילדים (COPPA)</h2>
+    <p>
+      האפליקציה מיועדת לילדים בגילאי 6-12, ולכן אנחנו מקפידים על תקני 
+      <strong>COPPA</strong> (Children's Online Privacy Protection Act) הקובע כללים מחמירים להגנה על פרטיות ילדים מתחת לגיל 13:
+    </p>
+    <ul>
+      <li>✅ אנחנו לא אוספים מידע אישי מילדים</li>
+      <li>✅ דורשים אישור הורה במסך הכניסה הראשון</li>
+      <li>✅ ההורה יכול לפנות אלינו ולבקש מחיקה (אם בכלל יהיה מה למחוק)</li>
+      <li>✅ אין צ'אט בין משתמשים — כל השיחות הן עם AI מבוקר</li>
+      <li>✅ אין מעקב התנהגותי או פרסומות מותאמות</li>
+    </ul>
+    <div class="highlight">
+      <strong>זכויות הורים:</strong> אם אתם הורים וחושדים שהאפליקציה אספה מידע על ילדכם — 
+      פנו אלינו ב-<a href="mailto:Asisi27@gmail.com">Asisi27@gmail.com</a> ונבדוק מיד.
+    </div>
+  </section>
+
+  <!-- 7. GDPR -->
+  <section>
+    <h2 class="section-title">7. 🇪🇺 GDPR (האיחוד האירופי)</h2>
+    <p>
+      למשתמשים מהאיחוד האירופי, אנחנו מתחייבים לעמוד בתקנות 
+      <strong>GDPR</strong> (General Data Protection Regulation):
+    </p>
+    <ul>
+      <li>🔍 <strong>זכות לעיון</strong>: ניתן לבקש מאיתנו מידע על כל הנתונים שיש לנו (אם בכלל יש)</li>
+      <li>✏️ <strong>זכות לתיקון</strong>: ניתן לבקש תיקון של מידע שגוי</li>
+      <li>🗑️ <strong>זכות למחיקה</strong>: ניתן לבקש למחוק את כל המידע</li>
+      <li>📦 <strong>זכות לניידות</strong>: ניתן לבקש לקבל את המידע בפורמט נייד</li>
+      <li>🛑 <strong>זכות להתנגד</strong>: ניתן להתנגד לעיבוד המידע</li>
+    </ul>
+    <p>
+      פנו אלינו ב-<a href="mailto:Asisi27@gmail.com">Asisi27@gmail.com</a> ונענה תוך 30 יום.
+    </p>
+  </section>
+
+  <!-- 8. ISRAELI LAW -->
+  <section>
+    <h2 class="section-title">8. 🇮🇱 חוק הגנת הפרטיות הישראלי</h2>
+    <p>
+      האפליקציה פותחה בישראל ומתחייבת לעמוד ב<strong>חוק הגנת הפרטיות, תשמ"א-1981</strong> 
+      ובתקנות הנלוות לו. כמו ב-GDPR, יש לכם זכות לעיון, תיקון ומחיקה של מידע.
+    </p>
+  </section>
+
+  <!-- 9. THIRD PARTIES -->
+  <section>
+    <h2 class="section-title">9. 🤝 שירותים של צד שלישי</h2>
+    <p>האפליקציה משתמשת בשירותים החיצוניים הבאים:</p>
+    <ul>
+      <li>
+        <strong>Anthropic (Claude AI)</strong> — לעיבוד שיחות AI<br>
+        <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">מדיניות פרטיות</a>
+      </li>
+      <li>
+        <strong>Cloudflare Workers</strong> — שרת ביניים מאובטח<br>
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">מדיניות פרטיות</a>
+      </li>
+      <li>
+        <strong>Google Play / GitHub Pages</strong> — אירוח האפליקציה
+      </li>
+      <li>
+        <strong>Web Speech API</strong> — זיהוי דיבור והקראה (Google/Apple)
+      </li>
+    </ul>
+  </section>
+
+  <!-- 10. SECURITY -->
+  <section>
+    <h2 class="section-title">10. 🔒 אבטחה</h2>
+    <p>אנחנו לוקחים אבטחה ברצינות:</p>
+    <ul>
+      <li>🔐 כל התקשורת עם השרת מוצפנת ב-HTTPS (TLS 1.3)</li>
+      <li>🛡️ אין מסד נתונים — אין מה לפרוץ</li>
+      <li>🔑 מפתחות API מאוחסנים כסודות מוצפנים ב-Cloudflare</li>
+      <li>🚫 אין רישום משתמשים — אין סיסמאות לגנוב</li>
+      <li>📱 הנתונים מקומיים במכשיר — תחת אחריותכם</li>
+    </ul>
+  </section>
+
+  <!-- 11. CHANGES -->
+  <section>
+    <h2 class="section-title">11. 📝 שינויים במדיניות</h2>
+    <p>
+      אם המדיניות תשתנה, נעדכן את מספר הגרסה ותאריך העדכון בראש המסמך. 
+      שינויים מהותיים יוצגו במסך הכניסה לאפליקציה ויידרשו אישור הורה מחדש.
+    </p>
+  </section>
+
+  <!-- 12. DISCLAIMER -->
+  <section>
+    <h2 class="section-title">12. ⚠️ הסתייגות חשובה</h2>
+    <div class="highlight warning">
+      <strong>קשת חברים היא כלי תמיכה ולא תחליף לטיפול מקצועי.</strong><br>
+      האפליקציה אינה מהווה ייעוץ רפואי, פסיכולוגי או חינוכי. 
+      תמיד התייעצו עם איש מקצוע (פסיכולוג, רופא, מטפל) לגבי הטיפול בילדכם על הספקטרום.
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-box">
+    <h2>📧 שאלות? פנו אלינו!</h2>
+    <p>
+      אנחנו זמינים לכל שאלה, בקשה למידע, או דיווח על בעיית פרטיות.<br>
+      נענה תוך 7 ימי עסקים.
+    </p>
+    <a href="mailto:Asisi27@gmail.com">📨 Asisi27@gmail.com</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <strong>קשת חברים</strong> 🌈 · אפליקציה למיומנויות חברתיות<br>
+      © 2026 Maximo Corporation · אסף סולומון · ישראל<br>
+      גרסה 1.0 · עודכן במאי 2026
+    </p>
+    <p style="margin-top: 14px;">
+      <a href="https://asisi27-hue.github.io/KESHET/">חזרה לאפליקציה</a> · 
+      <a href="https://asisi27-hue.github.io/keshet-landanig/">אתר הבית</a>
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
